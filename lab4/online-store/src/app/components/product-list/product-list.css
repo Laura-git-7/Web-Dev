@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; 
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+
+.kaspi-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.kaspi-logo {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.header-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    color: #2b2b2b;
+    font-weight: 700;
+    margin: 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.product-card:hover{
+    transform: translateY(-5px);
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.thumb:hover{
+    border-color: #007bff;
+}
+
+.thumb.active{
+    border: 2px solid #007bff;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-buy, .btn-share {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-buy {
+    background-color: #007bff;
+}
+
+.btn-share {
+    background-color: #25d366;
+}
+
+.star-filled {
+  color: #ffc107; 
+  font-size: 1.2rem;
+}
+
+.star-empty {
+  color: #e4e5e9;
+  font-size: 1.2rem;
+}
+
+.rating-text {
+  margin-left: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
