@@ -1,0 +1,49 @@
+<div class="product-container">
+    <div class="kaspi-header">
+        <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/a/aa/Logo_of_Kaspi_bank.png/960px-Logo_of_Kaspi_bank.png?20170626135209" alt="Kaspi Logo" class="kaspi-logo">
+        <h1 class="header-title">Kaspi.kz</h1>
+    </div>
+    
+    <div class="product-grid">
+        @for (item of products; track item.id) {
+            <div class="product-card">
+                <div class="gallery-container">
+                    <img [src]="currentImage(item)" alt="item.name" class="product-image">
+
+                    <div class="thumbnail-row">
+                        @for (imgUrl of item.images; track $index) {
+                            <img 
+                                [src]="imgUrl"
+                                class="thumb"
+                                [class.active]="$index===(selectedImageIndex[item.id]||0)"
+                                (click)="changeImage(item.id, $index)"
+                            >
+                        }
+                    </div>
+                </div>
+                
+
+                <h3> {{item.name}} </h3>
+                <p style="font-size: 0.9rem; color: #666;">{{item.description}}</p>
+
+                <div class="info-product">
+                    <p class="price">{{item.price}} ₸</p>
+                    <div class="rating">
+                        @for (star of getStars(item.rating); track $index) {
+                            <span class="star-filled">★</span>
+                        }
+                        @for (empty of getEmptyStars(item.rating); track $index) {
+                        <span class="star-empty">☆</span>
+                        }
+                        <span class="rating-text">({{ item.rating }})</span>
+                        </div>
+                </div>
+
+                <div class="actions">
+                    <a [href]="item.link" target="_blank" class="btn-buy">Buy on Kaspi</a>
+                    <button (click)='share(item.link, item.name)' class="btn-share">Share</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
