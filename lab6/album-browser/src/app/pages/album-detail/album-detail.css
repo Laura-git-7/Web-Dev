@@ -1,0 +1,29 @@
+.wrap { max-width: 650px; }
+.lbl { display: block; margin: 12px 0 6px; font-weight: 600; }
+.inp {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+.actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+}
+.btn.outline {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hint { padding: 10px 0; opacity: .85; }
+.error { color: #b00020; }

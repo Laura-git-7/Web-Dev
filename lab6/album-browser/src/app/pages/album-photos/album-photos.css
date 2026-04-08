@@ -1,0 +1,44 @@
+.btn{
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.btn.outline{
+  background:#fff;
+  color:#111;
+  border:1px solid #ddd;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap:12px;
+}
+
+.card{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:10px;
+}
+
+img{
+  width:100%;
+  border-radius:10px;
+  display:block;
+}
+
+.title{
+  margin-top:8px;
+  font-size:12px;
+  opacity:.85;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.hint{ padding:10px 0; opacity:.85; }
+.error{ color:#b00020; }
